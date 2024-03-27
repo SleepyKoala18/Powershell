@@ -3,11 +3,11 @@ $line2 = "What model number for john.doe@sharklasers.com?"
 
 
 $pattern = '[A-Za-z]{2}\d{2,5}'
-$line1, $line2 | ForEach-obect {
-if ($_ -match $pattern){
+$line1, $line2 | ForEach-object {
+ if ($_ -match $pattern){
     Write-Host $Matches[0]": $_"
-}
-else{
+ }
+ else{
     write-host "no matches found on: $_"
  }
 }  
